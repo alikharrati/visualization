@@ -1,1 +1,28 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pie Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+        var data = [{
+            values: [15, 30, 45, 10],
+            labels: ['A', 'B', 'C', 'D'],
+            type: 'pie',
+            hoverinfo: 'label+percent+name',
+            textinfo: 'percent'
+        }];
+        
+        var layout = {
+            title: 'Total Employment by Sector',
+            height: 400,
+            width: 500
+        };
+        
+        Plotly.newPlot('chart', data, layout);
+    </script>
+</body>
+</html>
